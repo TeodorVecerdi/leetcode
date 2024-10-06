@@ -20,6 +20,7 @@ add_executable(leetcode main.cpp
         easy/2515-shortest-distance-to-target-string-in-a-circular-array.h
         easy/2432-the-employee-that-worked-on-the-longest-task.h
         medium/71-simplify-path.h
+        easy/191-number-of-1-bits.h
 )
 
 if (WIN32)
