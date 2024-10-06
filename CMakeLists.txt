@@ -13,6 +13,8 @@ add_executable(leetcode main.cpp
         easy/383-ransom-note.h
         easy/504-base-7.h
         easy/543-diameter-of-binary-tree.h
+        medium/2-add-two-numbers.h
+        stream_operators.h
 )
 
 if (WIN32)
