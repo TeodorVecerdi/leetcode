@@ -12,6 +12,7 @@ add_executable(leetcode main.cpp
         easy/405-convert-a-number-to-hexadecimal.h
         easy/383-ransom-note.h
         easy/504-base-7.h
+        easy/543-diameter-of-binary-tree.h
 )
 
 if (WIN32)
