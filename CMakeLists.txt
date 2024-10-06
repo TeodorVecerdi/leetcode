@@ -17,6 +17,7 @@ add_executable(leetcode main.cpp
         hard/2366-minimum-replacements-to-sort-the-array.h
         easy/2710-remove-trailing-zeros-from-a-string.h
         easy/2347-best-poker-hand.h
+        easy/2515-shortest-distance-to-target-string-in-a-circular-array.h
 )
 
 if (WIN32)
