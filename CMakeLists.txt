@@ -19,6 +19,7 @@ add_executable(leetcode main.cpp
         easy/2347-best-poker-hand.h
         easy/2515-shortest-distance-to-target-string-in-a-circular-array.h
         easy/2432-the-employee-that-worked-on-the-longest-task.h
+        medium/71-simplify-path.h
 )
 
 if (WIN32)
