@@ -15,6 +15,7 @@ add_executable(leetcode main.cpp
         medium/2-add-two-numbers.h
         stream_operators.h
         hard/2366-minimum-replacements-to-sort-the-array.h
+        easy/2710-remove-trailing-zeros-from-a-string.h
 )
 
 if (WIN32)
