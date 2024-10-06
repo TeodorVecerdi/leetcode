@@ -18,6 +18,7 @@ add_executable(leetcode main.cpp
         easy/2710-remove-trailing-zeros-from-a-string.h
         easy/2347-best-poker-hand.h
         easy/2515-shortest-distance-to-target-string-in-a-circular-array.h
+        easy/2432-the-employee-that-worked-on-the-longest-task.h
 )
 
 if (WIN32)
