@@ -6,8 +6,8 @@
 // Definition for a binary tree node.
 struct TreeNode {
     int val;
-    TreeNode *left;
-    TreeNode *right;
+    TreeNode* left;
+    TreeNode* right;
 
     explicit TreeNode(const int x) :
         val(x), left(nullptr), right(nullptr) {
@@ -15,16 +15,16 @@ struct TreeNode {
 };
 
 // Function to build tree from vector of optional ints
-inline TreeNode *buildTree(const std::vector<std::optional<int>> &nodes) {
+inline TreeNode* buildTree(const std::vector<std::optional<int>>& nodes) {
     if (nodes.empty() || !nodes[0].has_value())
         return nullptr;
 
-    auto *root = new TreeNode(nodes[0].value());
-    std::queue<TreeNode *> q;
+    auto* root = new TreeNode(nodes[0].value());
+    std::queue<TreeNode*> q;
     q.push(root);
 
     for (size_t i = 1; i < nodes.size(); i += 2) {
-        TreeNode *current = q.front();
+        TreeNode* current = q.front();
         q.pop();
 
         if (i < nodes.size() && nodes[i].has_value()) {
@@ -42,7 +42,7 @@ inline TreeNode *buildTree(const std::vector<std::optional<int>> &nodes) {
 }
 
 // Function to delete the tree (to prevent memory leaks)
-inline void deleteTree(const TreeNode *root) {
+inline void deleteTree(const TreeNode* root) {
     if (root == nullptr)
         return;
     deleteTree(root->left);
@@ -50,7 +50,7 @@ inline void deleteTree(const TreeNode *root) {
     delete root;
 }
 
-inline size_t dfs(const TreeNode *node, size_t &maxDiameter) {
+inline size_t dfs(const TreeNode* node, size_t& maxDiameter) {
     if (node == nullptr)
         return 0;
 
@@ -62,7 +62,7 @@ inline size_t dfs(const TreeNode *node, size_t &maxDiameter) {
     return std::max(leftHeight, rightHeight) + 1;
 }
 
-inline size_t solve(const TreeNode *root) {
+inline size_t solve(const TreeNode* root) {
     size_t maxDiameter = 0;
     dfs(root, maxDiameter);
     return maxDiameter;
@@ -72,7 +72,7 @@ inline size_t solve(const TreeNode *root) {
 // The diameter of a binary tree is the length of the longest path between any two nodes in a tree.
 // This path may or may not pass through the root.
 DEFINE_PROBLEM(DiameterOfBinaryTree, std::vector<std::optional<int>>, size_t) {
-    const TreeNode *root = buildTree(input);
+    const TreeNode* root = buildTree(input);
     const size_t result = solve(root);
     deleteTree(root);
     return result;
