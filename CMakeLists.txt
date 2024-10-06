@@ -4,6 +4,8 @@ project(leetcode)
 
 set(CMAKE_CXX_STANDARD 20)
 
+include_directories(${CMAKE_SOURCE_DIR})
+
 add_executable(leetcode main.cpp
         easy/1046-last-stone-weight.h
         problem_runner.h
@@ -21,6 +23,8 @@ add_executable(leetcode main.cpp
         easy/2432-the-employee-that-worked-on-the-longest-task.h
         medium/71-simplify-path.h
         easy/191-number-of-1-bits.h
+        medium/151-reverse-words-in-a-string.h
+        data/BTree.h
 )
 
 if (WIN32)
