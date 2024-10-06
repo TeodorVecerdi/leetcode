@@ -16,6 +16,7 @@ add_executable(leetcode main.cpp
         stream_operators.h
         hard/2366-minimum-replacements-to-sort-the-array.h
         easy/2710-remove-trailing-zeros-from-a-string.h
+        easy/2347-best-poker-hand.h
 )
 
 if (WIN32)
