@@ -15,13 +15,13 @@ DEFINE_PROBLEM(RansomNote, L(std::pair<std::string, std::string>), bool) {
         return false;
     }
 
-    std::unordered_map<char, int> magazine_chars;
+    std::array<int, 26> magazine_chars = {};
     for (const char c : magazine) {
-        ++magazine_chars[c];
+        ++magazine_chars[c - 'a'];
     }
 
     for (const char c : ransomNote) {
-        if (--magazine_chars[c] < 0) {
+        if (--magazine_chars[c - 'a'] < 0) {
             return false;
         }
     }
