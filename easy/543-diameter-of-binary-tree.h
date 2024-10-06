@@ -3,9 +3,9 @@
 #include <bits/stdc++.h>
 
 #include "problem_runner.h"
-#include "data/BTree.h"
+#include "data/BinaryTree.h"
 
-inline size_t dfs(const BTreeNode<int32_t>* node, size_t& maxDiameter) {
+inline size_t dfs(const BinaryTree<int32_t>* node, size_t& maxDiameter) {
     if (node == nullptr)
         return 0;
 
@@ -17,7 +17,7 @@ inline size_t dfs(const BTreeNode<int32_t>* node, size_t& maxDiameter) {
     return std::max(leftHeight, rightHeight) + 1;
 }
 
-inline size_t solve(const BTreeNode<int32_t>* root) {
+inline size_t solve(const BinaryTree<int32_t>* root) {
     size_t maxDiameter = 0;
     dfs(root, maxDiameter);
     return maxDiameter;
@@ -27,9 +27,9 @@ inline size_t solve(const BTreeNode<int32_t>* root) {
 // The diameter of a binary tree is the length of the longest path between any two nodes in a tree.
 // This path may or may not pass through the root.
 DEFINE_PROBLEM(DiameterOfBinaryTree, std::vector<std::optional<int>>, size_t) {
-    BTreeNode<int32_t>* root = BTreeNode<int32_t>::create(input);
+    BinaryTree<int32_t>* root = BinaryTree<int32_t>::create(input);
     const size_t result = solve(root);
-    BTreeNode<int32_t>::free(root);
+    BinaryTree<int32_t>::free(root);
     return result;
 })
 

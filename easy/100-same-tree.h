@@ -2,12 +2,12 @@
 
 #include <bits/stdc++.h>
 #include "problem_runner.h"
-#include "data/BTree.h"
+#include "data/BinaryTree.h"
 
 // Given the roots of two binary trees p and q, write a function to check if they are the same or not.
 // Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
 
-inline bool solve(const BTreeNode<int32_t>* lhs, const BTreeNode<int32_t>* rhs) {
+inline bool solve(const BinaryTree<int32_t>* lhs, const BinaryTree<int32_t>* rhs) {
     if (lhs == nullptr && rhs == nullptr)
         return true;
     if (lhs == nullptr || rhs == nullptr)
@@ -19,13 +19,13 @@ inline bool solve(const BTreeNode<int32_t>* lhs, const BTreeNode<int32_t>* rhs) 
 }
 
 DEFINE_PROBLEM(SameTree, L(std::pair<std::vector<std::optional<int>>, std::vector<std::optional<int>>>), bool) {
-    BTreeNode<int32_t>* p = BTreeNode<int32_t>::create(input.first);
-    BTreeNode<int32_t>* q = BTreeNode<int32_t>::create(input.second);
+    BinaryTree<int32_t>* p = BinaryTree<int32_t>::create(input.first);
+    BinaryTree<int32_t>* q = BinaryTree<int32_t>::create(input.second);
 
     const bool result = solve(p, q);
 
-    BTreeNode<int32_t>::free(p);
-    BTreeNode<int32_t>::free(q);
+    BinaryTree<int32_t>::free(p);
+    BinaryTree<int32_t>::free(q);
     return result;
 })
 

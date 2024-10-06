@@ -2,43 +2,43 @@
 
 
 template<typename T>
-struct BTreeNode {
+struct BinaryTree {
     T val;
-    BTreeNode* left = nullptr;
-    BTreeNode* right = nullptr;
+    BinaryTree* left = nullptr;
+    BinaryTree* right = nullptr;
 
-    BTreeNode()
+    BinaryTree()
         : val({}), left(nullptr), right(nullptr) {
     }
 
-    explicit BTreeNode(T x)
+    explicit BinaryTree(T x)
         : val(x), left(nullptr), right(nullptr) {
     }
 
-    BTreeNode(T x, BTreeNode* left, BTreeNode* right)
+    BinaryTree(T x, BinaryTree* left, BinaryTree* right)
         : val(x), left(left), right(right) {
     }
 
 public:
-    static BTreeNode* create(const std::vector<std::optional<T>>& nodes) {
+    static BinaryTree* create(const std::vector<std::optional<T>>& nodes) {
         if (nodes.empty() || !nodes[0].has_value())
             return nullptr;
 
-        auto* root = new BTreeNode(nodes[0].value());
-        std::queue<BTreeNode*> q;
+        auto* root = new BinaryTree(nodes[0].value());
+        std::queue<BinaryTree*> q;
         q.push(root);
 
         for (size_t i = 1; i < nodes.size(); i += 2) {
-            BTreeNode* current = q.front();
+            BinaryTree* current = q.front();
             q.pop();
 
             if (i < nodes.size() && nodes[i].has_value()) {
-                current->left = new BTreeNode(nodes[i].value());
+                current->left = new BinaryTree(nodes[i].value());
                 q.push(current->left);
             }
 
             if (i + 1 < nodes.size() && nodes[i + 1].has_value()) {
-                current->right = new BTreeNode(nodes[i + 1].value());
+                current->right = new BinaryTree(nodes[i + 1].value());
                 q.push(current->right);
             }
         }
@@ -46,7 +46,7 @@ public:
         return root;
     }
 
-    static void free(BTreeNode* root) {
+    static void free(BinaryTree* root) {
         if (root == nullptr)
             return;
         free(root->left);
