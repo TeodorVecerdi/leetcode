@@ -15,6 +15,7 @@ add_executable(leetcode main.cpp
         easy/543-diameter-of-binary-tree.h
         medium/2-add-two-numbers.h
         stream_operators.h
+        hard/2366-minimum-replacements-to-sort-the-array.h
 )
 
 if (WIN32)
