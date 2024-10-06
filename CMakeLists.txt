@@ -10,6 +10,7 @@ add_executable(leetcode main.cpp
         easy/example.h
         hard/1096-brace-expansion-ii.h
         easy/405-convert-a-number-to-hexadecimal.h
+        easy/383-ransom-note.h
 )
 
 if (WIN32)
