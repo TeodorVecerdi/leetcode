@@ -25,6 +25,7 @@ add_executable(leetcode main.cpp
         easy/191-number-of-1-bits.h
         medium/151-reverse-words-in-a-string.h
         data/BTree.h
+        easy/100-same-tree.h
 )
 
 if (WIN32)
