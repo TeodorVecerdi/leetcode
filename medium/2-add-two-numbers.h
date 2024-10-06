@@ -1,55 +1,10 @@
 #pragma once
 
 #include <bits/stdc++.h>
-#include "../problem_runner.h"
+#include "problem_runner.h"
+#include "data/LinkedList.h"
 
-// Definition for singly-linked list.
-struct ListNode {
-    int val;
-    ListNode* next;
-
-    ListNode()
-        : val(0), next(nullptr) {
-    }
-
-    explicit ListNode(int x)
-        : val(x), next(nullptr) {
-    }
-
-    ListNode(int x, ListNode* next)
-        : val(x), next(next) {
-    }
-};
-
-// Function to build a linked list from a vector
-inline ListNode* buildList(const std::vector<int>& nums) {
-    ListNode dummy(0);
-    ListNode* current = &dummy;
-    for (const int num: nums) {
-        current->next = new ListNode(num);
-        current = current->next;
-    }
-    return dummy.next;
-}
-
-// Function to convert a linked list to a vector (for result checking)
-inline std::vector<int> listToVector(const ListNode* head) {
-    std::vector<int> result;
-    while (head) {
-        result.push_back(head->val);
-        head = head->next;
-    }
-    return result;
-}
-
-// Function to delete the linked list (to prevent memory leaks)
-inline void deleteList(const ListNode* head) {
-    while (head) {
-        const ListNode* temp = head;
-        head = head->next;
-        delete temp;
-    }
-}
+using ListNode = LinkedList<int32_t>;
 
 inline ListNode* solve(const ListNode* l1, const ListNode* l2) {
     ListNode result;
@@ -82,16 +37,16 @@ inline ListNode* solve(const ListNode* l1, const ListNode* l2) {
 }
 
 DEFINE_PROBLEM(AddTwoNumbers, L(std::pair<std::vector<int>, std::vector<int>>), std::vector<int>) {
-    const ListNode* l1 = buildList(input.first);
-    const ListNode* l2 = buildList(input.second);
+    const ListNode* l1 = ListNode::from_vector(input.first);
+    const ListNode* l2 = ListNode::from_vector(input.second);
 
     const ListNode* result = solve(l1, l2);
 
-    std::vector<int> output = listToVector(result);
+    std::vector<int> output = ListNode::to_vector(result);
 
-    deleteList(l1);
-    deleteList(l2);
-    deleteList(result);
+    ListNode::free(l1);
+    ListNode::free(l2);
+    ListNode::free(result);
 
     return output;
 })
