@@ -1,6 +1,7 @@
 ---
 Language: Cpp
 BasedOnStyle: LLVM
+TabWidth: 4
 AccessModifierOffset: -4
 AlignConsecutiveAssignments: false
 AlignConsecutiveDeclarations: false
@@ -27,10 +28,8 @@ BraceWrapping:
   AfterObjCDeclaration: false
   IndentBraces: false
 BreakBeforeBraces: Custom
-BreakConstructorInitializers: AfterColon
-BreakConstructorInitializersBeforeComma: false
+BreakConstructorInitializers: BeforeComma
 ColumnLimit: 0
-ConstructorInitializerAllOnOneLineOrOnePerLine: false
 ContinuationIndentWidth: 8
 IncludeCategories: 
   - Regex: ^<.*
@@ -53,6 +52,5 @@ SpacesInAngles: false
 SpacesInConditionalStatement: false
 SpacesInCStyleCastParentheses: false
 SpacesInParentheses: false
-TabWidth: 4
 PointerAlignment: Left
 ...
