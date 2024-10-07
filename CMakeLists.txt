@@ -25,6 +25,7 @@ add_executable(leetcode main.cpp
         medium/2-add-two-numbers.h
         medium/19-remove-nth-node-from-end-of-list.h
         medium/71-simplify-path.h
+        medium/116-populating-next-right-pointers-in-each-node.h
         medium/151-reverse-words-in-a-string.h
         hard/1096-brace-expansion-ii.h
         hard/2366-minimum-replacements-to-sort-the-array.h
