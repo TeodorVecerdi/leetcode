@@ -20,6 +20,7 @@ add_executable(leetcode main.cpp
         easy/2347-best-poker-hand.h
         easy/2432-the-employee-that-worked-on-the-longest-task.h
         easy/2515-shortest-distance-to-target-string-in-a-circular-array.h
+        easy/2696-minimum-string-length-after-removing-substrings.h
         easy/2710-remove-trailing-zeros-from-a-string.h
         easy/100-same-tree.h
         easy/191-number-of-1-bits.h
