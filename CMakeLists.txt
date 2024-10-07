@@ -15,6 +15,7 @@ add_executable(leetcode main.cpp
         easy/405-convert-a-number-to-hexadecimal.h
         easy/504-base-7.h
         easy/543-diameter-of-binary-tree.h
+        easy/821-shortest-distance-to-a-character.h
         easy/1046-last-stone-weight.h
         easy/2347-best-poker-hand.h
         easy/2432-the-employee-that-worked-on-the-longest-task.h
