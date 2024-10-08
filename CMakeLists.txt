@@ -30,6 +30,7 @@ add_executable(leetcode main.cpp
         medium/116-populating-next-right-pointers-in-each-node.h
         medium/151-reverse-words-in-a-string.h
         medium/921-minimum-add-to-make-parentheses-valid.h
+        medium/1963-minimum-number-of-swaps-to-make-the-string-balanced.h
         hard/1096-brace-expansion-ii.h
         hard/2366-minimum-replacements-to-sort-the-array.h
 )
