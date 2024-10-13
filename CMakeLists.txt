@@ -24,6 +24,7 @@ add_executable(leetcode src/main.cpp
         src/easy/2224-minimum-number-of-operations-to-convert-time.h
         src/easy/2236-root-equals-sum-of-children.h
         src/easy/2347-best-poker-hand.h
+        src/easy/2379-minimum-recolors-to-get-k-consecutive-black-blocks.h
         src/easy/2432-the-employee-that-worked-on-the-longest-task.h
         src/easy/2515-shortest-distance-to-target-string-in-a-circular-array.h
         src/easy/2696-minimum-string-length-after-removing-substrings.h
