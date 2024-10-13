@@ -9,6 +9,7 @@ include_directories(${CMAKE_SOURCE_DIR})
 add_executable(leetcode main.cpp
         problem_runner.h
         stream_operators.h
+        template.h
         data/BinaryTree.h
         data/LinkedList.h
         easy/383-ransom-note.h
