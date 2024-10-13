@@ -4,40 +4,40 @@ project(leetcode)
 
 set(CMAKE_CXX_STANDARD 20)
 
-include_directories(${CMAKE_SOURCE_DIR})
+include_directories(${CMAKE_SOURCE_DIR}/src)
 
-add_executable(leetcode main.cpp
-        problem_runner.h
-        stream_operators.h
-        template.h
-        data/BinaryTree.h
-        data/LinkedList.h
-        easy/383-ransom-note.h
-        easy/405-convert-a-number-to-hexadecimal.h
-        easy/504-base-7.h
-        easy/543-diameter-of-binary-tree.h
-        easy/821-shortest-distance-to-a-character.h
-        easy/1046-last-stone-weight.h
-        easy/2185-counting-words-with-a-given-prefix.h
-        easy/2236-root-equals-sum-of-children.h
-        easy/2347-best-poker-hand.h
-        easy/2432-the-employee-that-worked-on-the-longest-task.h
-        easy/2515-shortest-distance-to-target-string-in-a-circular-array.h
-        easy/2696-minimum-string-length-after-removing-substrings.h
-        easy/2710-remove-trailing-zeros-from-a-string.h
-        easy/100-same-tree.h
-        easy/191-number-of-1-bits.h
-        medium/2-add-two-numbers.h
-        medium/19-remove-nth-node-from-end-of-list.h
-        medium/71-simplify-path.h
-        medium/116-populating-next-right-pointers-in-each-node.h
-        medium/151-reverse-words-in-a-string.h
-        medium/921-minimum-add-to-make-parentheses-valid.h
-        medium/1864-minimum-number-of-swaps-to-make-the-binary-string-alternating.h
-        medium/1963-minimum-number-of-swaps-to-make-the-string-balanced.h
-        medium/2191-sort-the-jumbled-numbers.h
-        hard/1096-brace-expansion-ii.h
-        hard/2366-minimum-replacements-to-sort-the-array.h
+add_executable(leetcode src/main.cpp
+        src/problem_runner.h
+        src/stream_operators.h
+        src/template.h
+        src/data/BinaryTree.h
+        src/data/LinkedList.h
+        src/easy/383-ransom-note.h
+        src/easy/405-convert-a-number-to-hexadecimal.h
+        src/easy/504-base-7.h
+        src/easy/543-diameter-of-binary-tree.h
+        src/easy/821-shortest-distance-to-a-character.h
+        src/easy/1046-last-stone-weight.h
+        src/easy/2185-counting-words-with-a-given-prefix.h
+        src/easy/2236-root-equals-sum-of-children.h
+        src/easy/2347-best-poker-hand.h
+        src/easy/2432-the-employee-that-worked-on-the-longest-task.h
+        src/easy/2515-shortest-distance-to-target-string-in-a-circular-array.h
+        src/easy/2696-minimum-string-length-after-removing-substrings.h
+        src/easy/2710-remove-trailing-zeros-from-a-string.h
+        src/easy/100-same-tree.h
+        src/easy/191-number-of-1-bits.h
+        src/medium/2-add-two-numbers.h
+        src/medium/19-remove-nth-node-from-end-of-list.h
+        src/medium/71-simplify-path.h
+        src/medium/116-populating-next-right-pointers-in-each-node.h
+        src/medium/151-reverse-words-in-a-string.h
+        src/medium/921-minimum-add-to-make-parentheses-valid.h
+        src/medium/1864-minimum-number-of-swaps-to-make-the-binary-string-alternating.h
+        src/medium/1963-minimum-number-of-swaps-to-make-the-string-balanced.h
+        src/medium/2191-sort-the-jumbled-numbers.h
+        src/hard/1096-brace-expansion-ii.h
+        src/hard/2366-minimum-replacements-to-sort-the-array.h
 )
 
 if (WIN32)
