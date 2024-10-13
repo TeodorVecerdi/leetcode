@@ -35,6 +35,7 @@ add_executable(leetcode main.cpp
         medium/921-minimum-add-to-make-parentheses-valid.h
         medium/1864-minimum-number-of-swaps-to-make-the-binary-string-alternating.h
         medium/1963-minimum-number-of-swaps-to-make-the-string-balanced.h
+        medium/2191-sort-the-jumbled-numbers.h
         hard/1096-brace-expansion-ii.h
         hard/2366-minimum-replacements-to-sort-the-array.h
 )
