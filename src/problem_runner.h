@@ -9,12 +9,6 @@
 
 #include "stream_operators.h"
 
-struct CaptureArgs {
-    explicit CaptureArgs(const char *args) :
-        args(args) {}
-    const char *args;
-};
-
 template<typename Input, typename Output>
 class ProblemBuilder;
 
