@@ -17,7 +17,8 @@ class Problem {
 private:
     friend class ProblemBuilder<Input, Output>;
 
-    using SolutionFunc = std::function<Output(const Input &)>;
+    using SolutionFunc = std::function<Output(const Input&)>;
+
     struct TestCase {
         Input input;
         Output expected_output;
@@ -25,14 +26,12 @@ private:
         std::string output_str;
     };
 
-    Problem(const std::string &name, SolutionFunc solution) :
-        name(name), solution(std::move(solution)) {}
+    Problem(std::string name, SolutionFunc solution)
+        : name(std::move(name)), solution(std::move(solution)) {
+    }
 
-    void addTestCase(Input &&input, Output &&expected_output, const char *input_str, const char *output_str) {
-        test_cases.push_back({std::move(input),
-                              std::move(expected_output),
-                              input_str,
-                              output_str});
+    void addTestCase(Input&& input, Output&& expected_output, const char* input_str, const char* output_str) {
+        test_cases.emplace_back(std::move(input), std::move(expected_output), input_str, output_str);
     }
 
     std::string name;
@@ -46,7 +45,7 @@ public:
         double total_time = 0;
 
         for (size_t i = 0; i < test_cases.size(); ++i) {
-            const auto &test_case = test_cases[i];
+            const auto& test_case = test_cases[i];
             std::cout << "Test case " << (i + 1) << ": ";
 
             auto start_time = std::chrono::high_resolution_clock::now();
@@ -77,10 +76,11 @@ public:
 template<typename Input, typename Output>
 class ProblemBuilder {
 public:
-    ProblemBuilder(const std::string &name, typename Problem<Input, Output>::SolutionFunc solution) :
-        problem(name, std::move(solution)) {}
+    ProblemBuilder(const std::string& name, typename Problem<Input, Output>::SolutionFunc solution)
+        : problem(name, std::move(solution)) {
+    }
 
-    ProblemBuilder &addTestCase(Input &&input, Output &&expected_output, const char *input_str, const char *output_str) {
+    ProblemBuilder& addTestCase(Input&& input, Output&& expected_output, const char* input_str, const char* output_str) {
         problem.addTestCase(std::move(input), std::move(expected_output), input_str, output_str);
         return *this;
     }
@@ -98,17 +98,11 @@ private:
         #ProblemName, \
         [](const InputType& input) -> OutputType
 
-#define END_PROBLEM \
-    )
-
 #define TEST_CASE(Input, ExpectedOutput) \
     .addTestCase(Input, ExpectedOutput, S(Input), S(ExpectedOutput))
 
 #define BUILD_PROBLEM \
     .build()
-
-#define RUN_PROBLEM(ProblemName) \
-    ProblemName.run()
 
 #define L(...) __VA_ARGS__
 
