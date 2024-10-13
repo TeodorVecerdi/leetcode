@@ -18,6 +18,7 @@ add_executable(leetcode src/main.cpp
         src/easy/543-diameter-of-binary-tree.h
         src/easy/821-shortest-distance-to-a-character.h
         src/easy/1046-last-stone-weight.h
+        src/easy/2068-check-whether-two-strings-are-almost-equivalent.h
         src/easy/2185-counting-words-with-a-given-prefix.h
         src/easy/2236-root-equals-sum-of-children.h
         src/easy/2347-best-poker-hand.h
