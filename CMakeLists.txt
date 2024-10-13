@@ -39,7 +39,3 @@ add_executable(leetcode src/main.cpp
         src/hard/1096-brace-expansion-ii.h
         src/hard/2366-minimum-replacements-to-sort-the-array.h
 )
-
-if (WIN32)
-    target_link_libraries(leetcode psapi)
-endif ()
