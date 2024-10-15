@@ -12,6 +12,7 @@ add_executable(leetcode src/main.cpp
         src/template.h
         src/data/BinaryTree.h
         src/data/LinkedList.h
+        src/easy/217-contains-duplicate.h
         src/easy/383-ransom-note.h
         src/easy/405-convert-a-number-to-hexadecimal.h
         src/easy/504-base-7.h
