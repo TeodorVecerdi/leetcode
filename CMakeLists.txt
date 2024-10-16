@@ -12,6 +12,8 @@ add_executable(leetcode src/main.cpp
         src/template.h
         src/data/BinaryTree.h
         src/data/LinkedList.h
+        src/easy/100-same-tree.h
+        src/easy/191-number-of-1-bits.h
         src/easy/217-contains-duplicate.h
         src/easy/383-ransom-note.h
         src/easy/405-convert-a-number-to-hexadecimal.h
@@ -31,14 +33,13 @@ add_executable(leetcode src/main.cpp
         src/easy/2515-shortest-distance-to-target-string-in-a-circular-array.h
         src/easy/2696-minimum-string-length-after-removing-substrings.h
         src/easy/2710-remove-trailing-zeros-from-a-string.h
-        src/easy/100-same-tree.h
-        src/easy/191-number-of-1-bits.h
         src/medium/2-add-two-numbers.h
         src/medium/19-remove-nth-node-from-end-of-list.h
         src/medium/71-simplify-path.h
         src/medium/116-populating-next-right-pointers-in-each-node.h
         src/medium/151-reverse-words-in-a-string.h
         src/medium/921-minimum-add-to-make-parentheses-valid.h
+        src/medium/1405-longest-happy-string.h
         src/medium/1864-minimum-number-of-swaps-to-make-the-binary-string-alternating.h
         src/medium/1963-minimum-number-of-swaps-to-make-the-string-balanced.h
         src/medium/2125-number-of-laser-beams-in-a-bank.h
