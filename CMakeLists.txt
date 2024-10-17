@@ -38,6 +38,7 @@ add_executable(leetcode src/main.cpp
         src/medium/71-simplify-path.h
         src/medium/116-populating-next-right-pointers-in-each-node.h
         src/medium/151-reverse-words-in-a-string.h
+        src/medium/670-maximum-swap.h
         src/medium/921-minimum-add-to-make-parentheses-valid.h
         src/medium/1405-longest-happy-string.h
         src/medium/1864-minimum-number-of-swaps-to-make-the-binary-string-alternating.h
