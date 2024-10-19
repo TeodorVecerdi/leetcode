@@ -35,6 +35,7 @@ add_executable(leetcode src/main.cpp
         src/easy/2710-remove-trailing-zeros-from-a-string.h
         src/easy/2784-check-if-array-is-good.h
         src/easy/2806-account-balance-after-rounded-purchase.h
+        src/easy/2839-check-if-strings-can-be-made-equal-with-operations-i.h
         src/medium/2-add-two-numbers.h
         src/medium/19-remove-nth-node-from-end-of-list.h
         src/medium/71-simplify-path.h
