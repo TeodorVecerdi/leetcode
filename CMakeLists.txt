@@ -33,6 +33,7 @@ add_executable(leetcode src/main.cpp
         src/easy/2515-shortest-distance-to-target-string-in-a-circular-array.h
         src/easy/2696-minimum-string-length-after-removing-substrings.h
         src/easy/2710-remove-trailing-zeros-from-a-string.h
+        src/easy/2806-account-balance-after-rounded-purchase.h
         src/medium/2-add-two-numbers.h
         src/medium/19-remove-nth-node-from-end-of-list.h
         src/medium/71-simplify-path.h
