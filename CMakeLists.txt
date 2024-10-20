@@ -51,5 +51,6 @@ add_executable(leetcode src/main.cpp
         src/medium/2530-maximal-score-after-applying-k-operations.h
         src/medium/2938-separate-black-and-white-balls.h
         src/hard/1096-brace-expansion-ii.h
+        src/hard/1106-parsing-a-boolean-expression.h
         src/hard/2366-minimum-replacements-to-sort-the-array.h
 )
