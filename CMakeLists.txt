@@ -37,6 +37,7 @@ add_executable(leetcode src/main.cpp
         src/easy/2806-account-balance-after-rounded-purchase.h
         src/easy/2839-check-if-strings-can-be-made-equal-with-operations-i.h
         src/medium/2-add-two-numbers.h
+        src/medium/7-reverse-integer.h
         src/medium/19-remove-nth-node-from-end-of-list.h
         src/medium/71-simplify-path.h
         src/medium/116-populating-next-right-pointers-in-each-node.h
