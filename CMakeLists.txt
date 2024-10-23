@@ -53,6 +53,7 @@ add_executable(leetcode src/main.cpp
         src/medium/2191-sort-the-jumbled-numbers.h
         src/medium/2530-maximal-score-after-applying-k-operations.h
         src/medium/2583-kth-largest-sum-in-a-binary-tree.h
+        src/medium/2641-cousins-in-binary-tree-ii.h
         src/medium/2938-separate-black-and-white-balls.h
         src/hard/1096-brace-expansion-ii.h
         src/hard/1106-parsing-a-boolean-expression.h
