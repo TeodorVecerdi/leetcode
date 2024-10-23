@@ -1,5 +1,8 @@
 #pragma once
 
+#include <queue>
+#include <vector>
+#include <optional>
 
 template<typename T>
 struct BinaryTree {
@@ -44,6 +47,30 @@ public:
         }
 
         return root;
+    }
+
+    static std::vector<std::optional<T>> to_vector(BinaryTree* root) {
+        std::vector<std::optional<T>> nodes;
+        std::queue<BinaryTree*> q;
+        q.push(root);
+
+        while (!q.empty()) {
+            BinaryTree* current = q.front();
+            q.pop();
+
+            if (current == nullptr) {
+                nodes.push_back(std::nullopt);
+            } else {
+                nodes.push_back(current->val);
+                q.push(current->left);
+                q.push(current->right);
+            }
+        }
+
+        while (!nodes.empty() && !nodes.back().has_value())
+            nodes.pop_back();
+
+        return nodes;
     }
 
     static void free(BinaryTree* root) {
