@@ -24,6 +24,7 @@ add_executable(leetcode src/main.cpp
         src/easy/2068-check-whether-two-strings-are-almost-equivalent.h
         src/easy/2169-count-operations-to-obtain-zero.h
         src/easy/2185-counting-words-with-a-given-prefix.h
+        src/easy/2206-divide-array-into-equal-pairs.h
         src/easy/2224-minimum-number-of-operations-to-convert-time.h
         src/easy/2236-root-equals-sum-of-children.h
         src/easy/2335-minimum-amount-of-time-to-fill-cups.h
